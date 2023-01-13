@@ -1,19 +1,15 @@
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-//https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
-public class Find_All_Numbers_Disappeared_in_an_Array {
+//https://leetcode.com/problems/find-the-duplicate-number/
+public class Find_the_Duplicate_Number {
     public static void main(String[] args) {
-        int[] arr = {4,3,2,7,8,2,3,1};
+        int[] arr = {1,3,4,2,3};
         cyclic(arr);
         System.out.println(Arrays.toString(arr));
-        List<Integer> a1 = new ArrayList<>();
         for(int i=0;i<arr.length;i++){
             if(arr[i]!=i+1){
-                a1.add(i+1);
+                System.out.println(arr[i]);
             }
         }
-        System.out.println(a1);
     }
 
     public static void cyclic(int[] arr){
