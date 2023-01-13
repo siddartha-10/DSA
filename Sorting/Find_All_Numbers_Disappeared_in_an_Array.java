@@ -1,14 +1,22 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
-public class Cyclic_Sort {
+public class Find_All_Numbers_Disappeared_in_an_Array {
     public static void main(String[] args) {
-        int[] arr = {3,5,2,1,4};
+        int[] arr = {4,3,2,7,8,2,3,1};
         cyclic(arr);
         System.out.println(Arrays.toString(arr));
+        List<Integer> a1 = new ArrayList<>();
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]!=i+1){
+                a1.add(i+1);
+            }
+        }
+        System.out.println(a1);
     }
 
     public static void cyclic(int[] arr){
-        // we will move i only if the element is in the correct index
         int i=0;
         while(i<arr.length){
             int correct = arr[i]-1;
