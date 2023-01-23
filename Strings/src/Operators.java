@@ -9,6 +9,6 @@ public class Operators {
         // When an string is concatenated with an integer then it will be converted into Integer and then it calls toString() method
 
         System.out.println("Lionel"+ new ArrayList<>());
-        // it will be converted to toString method and it will print null
+        /* it will be converted to toString method, and it will print null */
     }
 }

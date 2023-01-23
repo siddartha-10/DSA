@@ -1,5 +1,7 @@
-// This takes O(n^2) times because the loop has to run n times and also the each time an element is added
-// the reference to the old string is dereferenced.
+/*
+ This takes O(n^2) times because the loop has to run n times and also the each time an element is added
+ the reference to the old string is dereferenced.
+*/
 
 
 public class Performance {
