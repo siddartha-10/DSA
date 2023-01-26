@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
-
+// https://leetcode.com/problems/combination-sum/description/
 public class Combination_sum_1_striver_leetcode_39 {
     public static void main(String[] args) {
         int[] arr = {2,3,6,7};
@@ -30,5 +30,5 @@ public class Combination_sum_1_striver_leetcode_39 {
         combination(0,candidates,target,a,new ArrayList<>());
         return a;
     }
-    
+
 }
