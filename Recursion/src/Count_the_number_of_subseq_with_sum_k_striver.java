@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Count_the_number_of_subseq_with_sum_k {
+public class Count_the_number_of_subseq_with_sum_k_striver {
     public static void main(String[] args) {
         int[] arr = {1,2,1,1};
         int k = 2;
