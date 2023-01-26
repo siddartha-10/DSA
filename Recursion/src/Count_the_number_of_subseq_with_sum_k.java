@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Count_the_number_of_subseq_with_sum_k {
     public static void main(String[] args) {
-        int[] arr = {1,2,1};
+        int[] arr = {1,2,1,1};
         int k = 2;
         int n = arr.length;
         ArrayList<Integer> a = new ArrayList<>();
@@ -21,11 +21,11 @@ public class Count_the_number_of_subseq_with_sum_k {
         a.add(arr[index]);
         sum+=arr[index];
         int l = 0 ;
-        l+=countseq(index+1,a,sum,k,arr,n);
+        l=countseq(index+1,a,sum,k,arr,n);
         a.remove(a.size()-1);
         sum-=arr[index];
         int m = 0;
-        m+=countseq(index+1,a,sum,k,arr,n);
+        m=countseq(index+1,a,sum,k,arr,n);
         return l + m;
     }
 
