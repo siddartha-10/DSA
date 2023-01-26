@@ -5,7 +5,7 @@ public class leetcode_1309 {
     }
 
     public static String freqAlphabets(String s) {
-        return "abc";
+        return "";
     }
 
 }
