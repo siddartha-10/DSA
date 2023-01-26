@@ -4,6 +4,7 @@ public class Recursion_Basic_Problems_Striver {
         print();
     }
 
+    // question 1:- print name 5 times
     public static void print(){
         if(c==5){
             return;
