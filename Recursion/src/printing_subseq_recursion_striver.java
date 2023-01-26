@@ -1,7 +1,6 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 
-public class printing_subseq_recursion {
+public class printing_subseq_recursion_striver {
     public static void main(String[] args) {
         int[] arr = {3,1,2};
         ArrayList<Integer> list = new ArrayList<>();
