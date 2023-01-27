@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/permutations-ii/description/
+// this problem is same as other permutation problems but we should not have any duplicate repetetions
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -27,7 +28,7 @@ public class permutations_2_striver_leetcode_47 {
             return;
         }
         for(int i=index;i<arr.length;i++){
-            if(i!=index && arr[i]==arr[i-1]) continue;
+            if(i!=index && arr[i]==arr[i-1]) continue; // when we write this line of code it make sures that there are no duplicates values.
             swap(i,index,arr);
             perm(arr,index+1,ans);
             swap(i,index,arr);
