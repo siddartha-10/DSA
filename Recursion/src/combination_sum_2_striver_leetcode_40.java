@@ -22,7 +22,7 @@ public class combination_sum_2_striver_leetcode_40 {
         }
 
         for(int i=index;i<arr.length;i++){
-            if(i>index && arr[i]==arr[i-1]){
+            if(i!=index && arr[i]==arr[i-1]){
                 continue;
             }
             if(arr[i]>target){
