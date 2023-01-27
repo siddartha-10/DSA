@@ -7,9 +7,8 @@ public class subset_sum_striver_gfg {
     public static void main(String[] args) {
         int target = 5;
         ArrayList<Integer> arr = new ArrayList<>();
-        arr.add(3);
-        arr.add(1);
         arr.add(2);
+        arr.add(3);
         ArrayList<Integer> b = new ArrayList<>();
 //        combinations(0,arr.size(),arr,0,b);
         System.out.println(subsetSums(arr,arr.size()));
