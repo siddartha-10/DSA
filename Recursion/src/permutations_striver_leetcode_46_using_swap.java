@@ -3,7 +3,7 @@ import java.util.List;
 
 public class permutations_striver_leetcode_46_using_swap {
     public static void main(String[] args) {
-        int[] arr = {1,2,3};
+        int[] arr = {1,1,2};
         System.out.println(perm(arr));
     }
 
