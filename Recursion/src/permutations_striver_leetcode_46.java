@@ -22,7 +22,7 @@ public class permutations_striver_leetcode_46 {
             return;
         }
         for (int i = 0; i < nums.length; i++) {
-            if(!arr[i]){
+            if(arr[i]==false){
                 arr[i] = true;
                 b.add(nums[i]);
                 perm(nums,arr,ans,b);
