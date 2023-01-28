@@ -7,7 +7,7 @@ public class Linear_search_recursion {
 //        ls(arr,target,0);
 //        System.out.println(ans);
         ArrayList<Integer> b = new ArrayList<>();
-        System.out.println(ls1(arr,target,0,b));
+        System.out.println(ls2(arr,target,0));
     }
 
     public static boolean linear_search(int[] arr,int target,int index){
@@ -41,6 +41,21 @@ public class Linear_search_recursion {
             b.add(index);
         }
         return ls1(arr,target,index+1,b);
+    }
+
+    // when you want to return the list but without passing it as an argument
+
+    public static ArrayList<Integer> ls2(int[] arr,int target,int index){
+        ArrayList<Integer> list = new ArrayList<>();
+        if(index==arr.length){
+            return list;
+        }
+        if(arr[index]==target){
+            list.add(index);
+        }
+        ArrayList<Integer> ans = ls2(arr,target,index+1);
+        list.addAll(ans);
+        return list;
     }
 
 }
