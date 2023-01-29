@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class merge_sort_recursion {
     public static void main(String[] args) {
-        int[] arr = {8,3,4,6,5,12};
+        int[] arr = {4,1,3,9,7};
 //        arr = mergeSort(arr);
 //        System.out.println(Arrays.toString(arr));
         mergeSortInplace(arr,0,arr.length);
