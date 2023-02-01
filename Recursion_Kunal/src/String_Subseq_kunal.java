@@ -23,8 +23,8 @@ public class String_Subseq_kunal {
             return a;
         }
         char ch = up.charAt(0);
-        ArrayList<String> left =  subseqarr(p+ch,up.substring(1));
-        ArrayList<String> right =  subseqarr(p,up.substring(1));
+        ArrayList<String> right =  subseqarr(p+ch,up.substring(1));
+        ArrayList<String> left =  subseqarr(p,up.substring(1));
 
         right.addAll(left);
         return right;
