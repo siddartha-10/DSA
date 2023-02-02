@@ -8,7 +8,8 @@ public class maze_problem_kunal {
                 {true,false,true},
                 {true,true,true}
         };
-        path_with_restrictions("",maze,0,0);
+        //path_with_restrictions("",maze,0,0);
+        //path_all_directions("",maze,0,0);
     }
 
     // count the number of ways to reach the end
@@ -66,6 +67,32 @@ public class maze_problem_kunal {
         }
         if(c<maze[0].length-1){
             path_with_restrictions(p+"R",maze,r,c+1);
+        }
+    }
+
+    public static void path_all_directions(String p,boolean[][] maze,int r,int c){
+        /*
+        we are going to get stack overflow if we run this because after a certain point
+        we are revisitng the already visited point again and again
+         */
+        if(r==maze.length-1 && c==maze[0].length-1){
+            System.out.println(p);
+            return;
+        }
+        if(maze[r][c]==false){
+            return;
+        }
+        if(r<maze.length-1){
+            path_all_directions(p+"D",maze,r+1,c);
+        }
+        if(c<maze[0].length-1){
+            path_all_directions(p+"R",maze,r,c+1);
+        }
+        if(r>0){
+            path_all_directions(p+"U",maze,r-1,c-1);
+        }
+        if(c>0){
+            path_all_directions(p+"L",maze,r,c-1);
         }
     }
 
