@@ -7,10 +7,8 @@ public class count_maze_problem_kunal {
         if(r==1 || c==1){
             return 1;
         }
-        int right = 0;
-        right = right + count(r,c-1);
-        int left = 0;
-        left = left + count(r-1,c);
+        int right = count(r,c-1);
+        int left = count(r-1,c);
         return left + right;
     }
 
