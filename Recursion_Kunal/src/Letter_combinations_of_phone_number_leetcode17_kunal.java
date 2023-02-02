@@ -1,14 +1,14 @@
 import java.util.ArrayList;
-
+// https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
 public class Letter_combinations_of_phone_number_leetcode17_kunal {
     public static void main(String[] args) {
-        String digits = "23";
+        String digits = "";
 //        String[] arr = {"","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
 //        combi(arr,"",digits);
-        System.out.println(combinations(digits));
+        System.out.println(letterCombinations(digits));
     }
 
-    public static ArrayList<String> combinations(String digits){
+    public static ArrayList<String> letterCombinations(String digits){
         String[] arr = {"","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
         ArrayList<String> list = new ArrayList<>();
         list.addAll(combi(arr,"",digits));
