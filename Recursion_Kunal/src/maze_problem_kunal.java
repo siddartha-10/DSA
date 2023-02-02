@@ -1,4 +1,4 @@
-public class count_maze_problem_kunal {
+public class maze_problem_kunal {
     public static void main(String[] args) {
         System.out.println(count(3,3));
     }
