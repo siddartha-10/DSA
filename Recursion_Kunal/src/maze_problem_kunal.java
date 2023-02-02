@@ -2,7 +2,13 @@ public class maze_problem_kunal {
     public static void main(String[] args) {
         //System.out.println(count(3,3));
         //path("",3,3);
-        path_with_diagonals("",3,3);
+        //path_with_diagonals("",3,3);
+        boolean[][] maze =  {
+                {true,true,true},
+                {true,false,true},
+                {true,true,true}
+        };
+        path_with_restrictions("",maze,0,0);
     }
 
     // count the number of ways to reach the end
@@ -44,6 +50,23 @@ public class maze_problem_kunal {
             path_with_diagonals(p+"H",r,c-1);
         }
 
+    }
+
+    public static void path_with_restrictions(String p,boolean[][] maze,int r,int c){
+        if(r==maze.length-1 && c==maze[0].length-1){
+            System.out.println(p);
+            return;
+        }
+        // if there is any restriction
+        if(maze[r][c]==false){
+            return;
+        }
+        if(r<maze.length-1){
+            path_with_restrictions(p+"D",maze,r+1,c);
+        }
+        if(c<maze[0].length-1){
+            path_with_restrictions(p+"R",maze,r,c+1);
+        }
     }
 
 }
