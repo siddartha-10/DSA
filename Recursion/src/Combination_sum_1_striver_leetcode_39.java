@@ -12,7 +12,7 @@ public class Combination_sum_1_striver_leetcode_39 {
         // base condition
         if(index==arr.length){
             if(target==0){
-                a.add(new ArrayList<>(b));
+                a.add(new ArrayList<>(b))
             }
             return;
         }
