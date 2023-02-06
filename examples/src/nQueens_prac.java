@@ -4,44 +4,46 @@ public class nQueens_prac {
         System.out.println(queen(board,0));
     }
 
-    public static int queen(boolean[][] board, int row){
-        if(row== board.length){
+    public static int queen(boolean[][] board,int row){
+        if(row==board.length){
             display(board);
             System.out.println();
             return 1;
         }
-        int count  = 0;
 
-        // we will start from 0 column as we are going to start from 0th column to board.length
-        for (int i = 0; i < board.length; i++) {
-            // now we need to place the queen if it is safe.
-            if(isSafe(board,row,i)){
-                board[row][i] = true;
-                count = count + queen(board,row+1);
-                board[row][i] = false;
+        int count = 0;
+        for(int col = 0;col<board[0].length;col++){
+            if(isSafe(board,row,col)){
+                board[row][col] = true; // queeen kept
+                count+=queen(board,row+1); // next row lo eda pedthav
+                board[row][col] = false; // queen remove
             }
         }
         return count;
     }
 
     private static boolean isSafe(boolean[][] board, int row, int col) {
+        // check the above row
         for(int i=0;i<row;i++){
             if(board[i][col]){
                 return false;
             }
         }
-        int maxleft = Math.min(row,col);
-        for(int i=1;i<=maxleft;i++){
+
+        int left = Math.min(row,col);
+        for(int i=1;i<=left;i++){
             if(board[row-1][col-1]){
                 return false;
             }
         }
-        int maxright = Math.min(row,board[0].length-col-1);
-        for (int i = 0; i < maxright; i++) {
-            if(board[row-1][col+1]){
+
+        int right = Math.min(row,board[0].length-1-col);
+        for(int i=1;i<=right;i++){
+            if(board[row-i][col+i]){
                 return false;
             }
         }
+
         return true;
     }
 
@@ -57,8 +59,6 @@ public class nQueens_prac {
             }
             System.out.println();
         }
-        return;
     }
-
 
 }
