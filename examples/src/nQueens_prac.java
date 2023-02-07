@@ -1,6 +1,6 @@
 public class nQueens_prac {
     public static void main(String[] args) {
-        boolean[][] board = new boolean[4][4];
+        boolean[][] board = new boolean[5][5];
         System.out.println(queen(board,0));
     }
 
@@ -32,7 +32,7 @@ public class nQueens_prac {
 
         int left = Math.min(row,col);
         for(int i=1;i<=left;i++){
-            if(board[row-1][col-1]){
+            if(board[row-i][col-i]){
                 return false;
             }
         }
