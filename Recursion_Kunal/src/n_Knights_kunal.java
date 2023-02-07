@@ -9,6 +9,7 @@ public class n_Knights_kunal {
         if(target==0){
             display(board);
             System.out.println();
+            return;
         }
         if(row== board.length-1 && col==board.length){
             return;
@@ -75,6 +76,7 @@ public class n_Knights_kunal {
             }
             System.out.println();
         }
+
     }
 
 }
