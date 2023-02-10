@@ -5,8 +5,8 @@ public class Find_kth_bit_in_nth_binary_string {
     public static void main(String[] args) {
         int n = 3;
         String s = "0";
-        int index = 1;
-        System.out.println(bin(n,s).charAt());
+        int index = 3;
+        System.out.println(bin(n,s).charAt(index-1));
     }
 
     public static String bin(int n,String s){
