@@ -4,5 +4,13 @@ public class FindUniqueUsingXOR {
         System.out.println(unique(arr));
     }
 
+    private static int unique(int[] arr) {
+        int ans = 0;
+        for (int a:arr) {
+            ans = ans ^ a;
+        }
+        return ans;
+    }
+
 
 }
