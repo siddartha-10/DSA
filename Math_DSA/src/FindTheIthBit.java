@@ -4,7 +4,7 @@ public class FindTheIthBit {
     }
 
     public static int Ith(int n,int k){
-        return n&(1<<(k));
+        return n&(1<<(k-1));
     }
 
 }
