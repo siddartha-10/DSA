@@ -4,8 +4,5 @@ public class FindUniqueUsingXOR {
         System.out.println(unique(arr));
     }
 
-    public static int unique(int[] arr){
-        return ;
-    }
 
 }
