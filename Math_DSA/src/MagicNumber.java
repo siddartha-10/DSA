@@ -1,6 +1,6 @@
 public class MagicNumber {
     public static void main(String[] args) {
-        System.out.println(magic(6));
+        System.out.println(magic(3));
     }
 
     public static int magic(int n){
