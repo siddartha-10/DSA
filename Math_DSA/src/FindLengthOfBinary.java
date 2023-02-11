@@ -9,7 +9,7 @@ public class FindLengthOfBinary {
 
     // using formula
     public static int length_using_formula(int number,int base){
-        int len = (int)(Math.log(number)/Math.log(base));
+        int len = (int)(Math.log(number)/Math.log(base)) + 1;
         return len;
     }
     // way 2 using the right shift operator
