@@ -3,7 +3,7 @@ public class Newtons_sqrt {
         System.out.println(sqrt(40));
     }
 
-    public static double sqrt(double n){ 
+    public static double sqrt(double n){
         double x = n;
         double root;
         while(true){
