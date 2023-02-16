@@ -10,5 +10,8 @@ public class Main {
         // as we have already created an object for it then it says
         // Hey i have already vreated an object please point to it.
         Singleton obj3 = Singleton.getInstance();
+
+
+        // all three reference varuibales are pointed towards the same instances.
     }
 }
