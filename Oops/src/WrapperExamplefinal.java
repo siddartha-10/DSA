@@ -1,7 +1,7 @@
-public class WrapperExample {
+public class WrapperExamplefinal {
     public static void main(String[] args) {
         final A mes = new A("messi");
-        mes.name = "lionel messi";
+        mes.name = "lionel messi"; // we can do this but
         System.out.println(mes.name);
     }
 }
