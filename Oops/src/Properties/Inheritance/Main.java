@@ -30,7 +30,12 @@ public class Main {
         BoxWeights box1 = new BoxWeights(1,2,3,10);
         System.out.println(box1.length+"  "+box1.width+"  "+box1.height+"  "+box1.weight);
  */
-        BoxWeights box = new Box(1,2,3,4);
+
+        BoxWeights box = new BoxWeights(1,2,3,4);
         System.out.println(box.weight);
+
+
+        BoxWeights box1 = new BoxWeights(box);
+        System.out.println(box1.length+"  "+box1.width+"  "+box1.height+"  "+box1.weight);
     }
 }
