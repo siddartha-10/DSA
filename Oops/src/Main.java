@@ -21,6 +21,12 @@ public class Main {
         // we can only use the varibales that are present in the class template because java is a static language
         // but in python we can do that as well
 
+
+
+        // we are calling a parameterised constructor
+
+        student messi = new student(10,"Lionel Messi",100.0f);
+        System.out.println(messi.numbers + "\n"+ messi.marks+ "\n"+ messi.names);
     }
 }
 
@@ -37,6 +43,12 @@ class student{
         this.numbers = 10;
         this.names = "Messi";
         this.marks = 56.7f;
+    }
+
+    student(int rno,String name,float marks){
+        this.numbers = rno;
+        this.names = name;
+        this.marks = marks;
     }
 
 }
