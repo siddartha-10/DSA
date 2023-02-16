@@ -30,9 +30,18 @@ public class Main {
 
 
         student ronny = new student();
-        System.out.println(ronny.numbers + "\n" + ronny.names + "\n" + ronny.marks);
+        //System.out.println(ronny.numbers + "\n" + ronny.names + "\n" + ronny.marks);
 
 
+        // this is an example of how one class is effected by another
+        student one = new student();
+        student two = one;
+
+        // now when i change the one.name to something then when i print two.name it prints something
+        // because the object in the heap is the same for both the objects one and two.
+
+        one.names = "something something";
+        System.out.println(two.names);
     }
 }
 
