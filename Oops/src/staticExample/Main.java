@@ -17,6 +17,9 @@ public class Main {
     }
 
     static void fun(){// this is a static method Hence it doesn't need any instance of an object to be created to use it
+        // this will give an error hence commented
+        // greeting(); error line bacuse its static and there is no object created.
+
         // now if we want to use an non-static member in a static class then we need create an object
         Main obj = new Main();
         obj.greeting();
