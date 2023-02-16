@@ -16,9 +16,15 @@ public class Box {
         this.width = side;
         this.height = side;
     }
-    public Box(double length, double width, double height) { // this is called when we call 2 arguments.
+    Box(double length, double width, double height) { // this is called when we call 2 arguments.
         this.length = length;
         this.width = width;
         this.height = height;
+    }
+
+    Box(Box old){ // this is an copy constructor
+        this.length = old.length;
+        this.height = old.height;
+        this.width = old.width;
     }
 }
