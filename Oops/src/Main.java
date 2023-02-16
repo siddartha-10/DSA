@@ -16,7 +16,7 @@ public class Main {
 //        student1.marks = 96.87f;
 //        student1.names = "Messi";
 
-        System.out.println(student1.numbers + "\n"+ student1.marks+ "\n"+ student1.names);
+        //System.out.println(student1.numbers + "\n"+ student1.marks+ "\n"+ student1.names);
 
         // we can only use the varibales that are present in the class template because java is a static language
         // but in python we can do that as well
@@ -26,7 +26,13 @@ public class Main {
         // we are calling a parameterised constructor
 
         student messi = new student(10,"Lionel Messi",100.0f);
-        System.out.println(messi.numbers + "\n"+ messi.marks+ "\n"+ messi.names);
+        //System.out.println(messi.numbers + "\n"+ messi.marks+ "\n"+ messi.names);
+
+
+        student ronny = new student();
+        System.out.println(ronny.numbers + "\n" + ronny.names + "\n" + ronny.marks);
+
+
     }
 }
 
@@ -39,11 +45,12 @@ class student{
 
     // we need a way to assign the values to it's varinale
 
+
+    // this is how we call one constructor from another constructor
     student(){
-        this.numbers = 10;
-        this.names = "Messi";
-        this.marks = 56.7f;
+        this (13,"default person",100.0f);
     }
+
 
     student(int rno,String name,float marks){
         this.numbers = rno;
