@@ -7,5 +7,8 @@ public class Main {
 
         System.out.println(messi.age+"\t"+messi.name+"\t"+messi.salary+"\t"+messi.marriage);
         System.out.println(sid.age+"\t"+sid.name+"\t"+sid.salary+"\t"+sid.marriage);
+
+        System.out.println(messi.population);
+        System.out.println(sid.population);
     }
 }
