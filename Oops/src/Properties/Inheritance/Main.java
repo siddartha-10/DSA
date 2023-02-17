@@ -29,7 +29,7 @@ public class Main {
         //now we want to pass the length, widht, height and also weight
         BoxWeights box1 = new BoxWeights(1,2,3,10);
         System.out.println(box1.length+"  "+box1.width+"  "+box1.height+"  "+box1.weight);
- */
+
 
         BoxWeights box = new BoxWeights(1,2,3,4);
         System.out.println(box.weight);
@@ -37,5 +37,23 @@ public class Main {
 
         BoxWeights box1 = new BoxWeights(box);
         System.out.println(box1.length+"  "+box1.width+"  "+box1.height+"  "+box1.weight);
+
+ */
+        BoxPrice box = new BoxPrice();
+        // the below line must print -1,-1,-1,-1,-1
+        System.out.println(box.length+" "+ box.width+" "+box.height+" "+ box.weight+" "+ box.price);
+
+        BoxPrice box1 = new BoxPrice(1,2,3,4,5);
+        // the below line will print 1,2,3,4,5.
+        System.out.println(box1.length+" "+ box1.width+" "+box1.height+" "+ box1.weight+" "+ box1.price);
+
+
+        BoxPrice box2 = new BoxPrice(box1);
+        // this line has to print 1,2,3,4,5 because we are passing the old BoxPrice whihc has the values
+        // of length,width,height,weight,price
+        System.out.println(box2.length+"    "+ box2.width+"    "+ box2.height+"    "+ box2.weight+"   "+ box2.price);
+
+
+
     }
 }

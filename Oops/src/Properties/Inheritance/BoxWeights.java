@@ -12,6 +12,11 @@ public class BoxWeights extends Box{
         this.weight = other.weight;
     }
 
+    BoxWeights(double side,double weight){
+        super(side);
+        this.weight = weight;
+    }
+
     public BoxWeights(double length, double width, double height, double weight) {
         super(length, width, height);
         // what does super mean
