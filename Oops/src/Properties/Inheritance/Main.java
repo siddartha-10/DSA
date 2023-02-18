@@ -58,6 +58,8 @@ public class Main {
         // because the reference is Box and not BoxWeight
         System.out.println(b1.length+" "+b1.height+" "+b1.width);
 
+        Box box1 = new Box(4.5,4.6,4.7);
+        box1.greeting();
 
 
     }

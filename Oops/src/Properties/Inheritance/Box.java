@@ -12,7 +12,7 @@ public class Box {
     }
 
     static void greeting(){
-        System.out.println("Hey");
+        System.out.println("Hey I am in box class");
     }
 
     Box(double side){ // this is used for a cube i.e when you pass only one argument.
