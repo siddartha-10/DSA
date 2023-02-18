@@ -10,6 +10,6 @@ public class Main {
         shape.area(); // this prints the area method in the Shapes classs because it has it.
         cricle.area(); // this prints the area method in the cricle class as they have it.
         square.area(); // this prints the area method in the Square class as it has it.
-        s1.area(); // this is giving the area of the shape 
+        s1.area(); // this is giving the area of the shape
     }
 }
