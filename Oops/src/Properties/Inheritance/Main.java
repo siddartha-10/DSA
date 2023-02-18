@@ -38,7 +38,7 @@ public class Main {
         BoxWeights box1 = new BoxWeights(box);
         System.out.println(box1.length+"  "+box1.width+"  "+box1.height+"  "+box1.weight);
 
- */
+
         BoxPrice box = new BoxPrice();
         // the below line must print -1,-1,-1,-1,-1
         System.out.println(box.length+" "+ box.width+" "+box.height+" "+ box.weight+" "+ box.price);
@@ -52,6 +52,11 @@ public class Main {
         // this line has to print 1,2,3,4,5 because we are passing the old BoxPrice whihc has the values
         // of length,width,height,weight,price
         System.out.println(box2.length+"    "+ box2.width+"    "+ box2.height+"    "+ box2.weight+"   "+ box2.price);
+        */
+
+        Box b1 = new BoxWeights(); // here we can see that it's taking only the varibales that are in box and not boxweight
+        // because the reference is Box and not BoxWeight
+        System.out.println(b1.length+" "+b1.height+" "+b1.width);
 
 
 
