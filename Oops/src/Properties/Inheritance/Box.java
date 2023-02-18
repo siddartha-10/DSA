@@ -11,6 +11,10 @@ public class Box {
         this.width=-1;
     }
 
+    static void greeting(){
+        System.out.println("Hey");
+    }
+
     Box(double side){ // this is used for a cube i.e when you pass only one argument.
         this.length = side;
         this.width = side;
