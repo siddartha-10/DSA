@@ -1,4 +1,5 @@
 package AbstractClasses;
 
-public class Parent {
+public abstract class Parent {
+    abstract void Career(String name);
 }
