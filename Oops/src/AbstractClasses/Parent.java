@@ -1,5 +1,12 @@
 package AbstractClasses;
 
 public abstract class Parent {
-    abstract void Career(String name);
+    int age;
+
+    public Parent(int age) {
+        this.age = age;
+    }
+
+    abstract void Career();
+    abstract void partner();
 }
