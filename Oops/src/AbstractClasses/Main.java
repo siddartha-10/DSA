@@ -10,6 +10,9 @@ public class Main {
         dau.Career(); // this going to print the career method in daughter class.
         System.out.println(dau.age);
 
+        Parent.hello(); // this is going to print the static method in the abstract classs
+        // we are calling it by the name of the parent class becuase we do not need to create an object for a static class.
+
 
     }
 }

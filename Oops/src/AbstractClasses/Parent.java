@@ -7,6 +7,10 @@ public abstract class Parent {
         this.age = age;
     }
 
+    static void hello(){
+        System.out.println("Hey ");
+    }
+
     abstract void Career();
     abstract void partner();
 }
