@@ -23,5 +23,9 @@ public class Main {
         // how this will print the power enginer start
         car.MusicStart();
         // this will say music start
+        car.Upgradeengine();
+        // this step is going to upgrade the enginer from power to electric
+        car.start();
+        // now when we run this it gives start electric engine
     }
 }
