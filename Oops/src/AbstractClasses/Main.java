@@ -5,6 +5,7 @@ public class Main {
         Son son = new Son(35);
         son.Career(); // this is going to print the career method in son class.
         System.out.println(son.age);
+        son.normal(); // this prints the overrideen method normal which is in the Son class.
 
         daughter dau = new daughter(29);
         dau.Career(); // this going to print the career method in daughter class.

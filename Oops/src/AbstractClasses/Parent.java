@@ -11,6 +11,10 @@ public abstract class Parent {
         System.out.println("Hey ");
     }
 
+    void normal(){
+        System.out.println("This is just a normal class");
+    }
+
     abstract void Career();
     abstract void partner();
 }
