@@ -1,17 +1,17 @@
 package Interfaces;
 
-public class Car implements Engine,Brake{
+public class Car implements Engine,Brake,Media{
 
     // at first you will get an error because all the methods as abstract so implement them
     // implement the methods availbale in both Engine and Brake
     @Override
     public void start(){
-        System.out.println("I start like a normal car");
+        System.out.println("I start Engine like a normal car");
     }
 
     @Override
     public void stop(){
-        System.out.println("I stop like a normal car");
+        System.out.println("I stop Engine like a normal car");
     }
 
     @Override
