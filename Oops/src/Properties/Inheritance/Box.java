@@ -1,6 +1,7 @@
 package Properties.Inheritance;
 
 public class Box {
+
     double length;
     double width;
     double height;

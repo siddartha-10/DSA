@@ -56,9 +56,9 @@ public class Main {
 
         Box b1 = new BoxWeights(); // here we can see that it's taking only the varibales that are in box and not boxweight
         // because the reference is Box and not BoxWeight
-        System.out.println(b1.length+" "+b1.height+" "+b1.width);
+        //System.out.println(b1.length+" "+b1.height+" "+b1.width);
 
-        Box box1 = new Box(4.5,4.6,4.7);
+        Box box1 = new BoxWeights(4.5,4.6,4.7,5.6);
         box1.greeting();
 
 
