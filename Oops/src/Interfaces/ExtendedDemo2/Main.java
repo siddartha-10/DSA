@@ -19,5 +19,6 @@ public class Main implements A,B{
         main.greeting();
         main.greet();
     }
+    //. hey
 
 }
