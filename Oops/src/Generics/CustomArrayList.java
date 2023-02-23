@@ -46,7 +46,7 @@ public class CustomArrayList {
     }
 
     public int size() {
-        return size;
+        return size;}
 
 
     @Override
