@@ -45,9 +45,9 @@ public class CustomArrayList {
         data[index] = num;
     }
 
-    public int size(){
+    public int size() {
         return size;
-    }
+
 
     @Override
     public String toString() {
