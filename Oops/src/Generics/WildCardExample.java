@@ -3,7 +3,7 @@ package Generics;
 import java.util.Arrays;
 
 public class WildCardExample<T extends Number> {
-
+// here in the above line we can see that T extends Number will only allow subclasses of Number and the Number class itself
     private Object data[];
     private static int Default_Size = 10;
     private int size = 0;
