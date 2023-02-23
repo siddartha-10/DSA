@@ -58,15 +58,22 @@ public class CustomArrayList {
     }
 
     public static void main(String[] args) {
+//        CustomArrayList arr = new CustomArrayList();
+//        arr.add(1);
+//        arr.add(2);
+//        arr.add(3);
+//        System.out.println(arr);
+//        arr.remove(); // what this does is just reduces the size of the array but when we try to assign something
+//        // to the index that was removed then it overrides it
+//        System.out.println(arr);
+//        arr.add(45); // we can see how remove operation is being done.
+//        System.out.println(arr);
+
         CustomArrayList arr = new CustomArrayList();
-        arr.add(1);
-        arr.add(2);
-        arr.add(3);
-        System.out.println(arr);
-        arr.remove(); // what this does is just reduces the size of the array but when we try to assign something
-        // to the index that was removed then it overrides it
-        System.out.println(arr);
-        arr.add(45); // we can see how remove operation is being done.
+        for (int i = 0; i < 14; i++) {
+            arr.add(2*i);
+        }
+
         System.out.println(arr);
     }
 }
