@@ -63,6 +63,28 @@ public class LL {
         return val;
     }
 
+    // this method is used to delete the second last element
+    public int deleteLast(){
+        if(size<=1){
+            return deleteFirst();
+        }
+        Node secondLast = get(size-2);
+        int val = tail.value;
+        tail = secondLast;
+        tail.next = null;
+        size = size - 1;
+        return val;
+    }
+
+    // this method is used to get the node of the index to be deleted
+    public Node get(int index){
+        Node node = head;
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+        }
+        return node;
+    }
+
     // this method is used to display the linkedList
     public void display(){
         Node temp = head;

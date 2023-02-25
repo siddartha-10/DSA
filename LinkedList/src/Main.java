@@ -5,7 +5,10 @@ public class Main {
         list.insertLast(25);
         list.insertFirst(15);
         list.insert(20,2);
+        list.display();
         System.out.println(list.deleteFirst());
+        list.display();
+        System.out.println(list.deleteLast());
         list.display();
     }
 }
