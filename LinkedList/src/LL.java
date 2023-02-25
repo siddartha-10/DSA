@@ -76,6 +76,18 @@ public class LL {
         return val;
     }
 
+    // this method is used to delete at a particular index
+    public int delete(int index){
+        if(index==0){
+            return deleteFirst();
+        }
+        Node prev = get(index-1);
+        int val = prev.next.value;
+        prev.next = prev.next.next;
+        size =size-1;
+        return val;
+    }
+
     // this method is used to get the node of the index to be deleted
     public Node get(int index){
         Node node = head;
