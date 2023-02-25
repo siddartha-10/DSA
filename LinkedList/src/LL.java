@@ -21,6 +21,18 @@ public class LL {
         size = size + 1;
     }
 
+    // this method is used to insert an element at the TAIL SIDE
+    public void insertLast(int val){
+        if(tail==null){
+            insertFirst(val);
+            return;
+        }
+        Node node = new Node(val);
+        tail.next = node;
+        tail = node;
+        size = size + 1;
+    }
+
     // this method is used to display the linkedList
     public void display(){
         Node temp = head;
