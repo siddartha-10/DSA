@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Binary_Search/Binary_Search.iml" filepath="$PROJECT_DIR$/Binary_Search/Binary_Search.iml" />
       <module fileurl="file://$PROJECT_DIR$/Linear_Search.java/Linear_Search.java.iml" filepath="$PROJECT_DIR$/Linear_Search.java/Linear_Search.java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LinkedList/LinkedList.iml" filepath="$PROJECT_DIR$/LinkedList/LinkedList.iml" />
       <module fileurl="file://$PROJECT_DIR$/Math_DSA/Math_DSA.iml" filepath="$PROJECT_DIR$/Math_DSA/Math_DSA.iml" />
       <module fileurl="file://$PROJECT_DIR$/Oops/Oops.iml" filepath="$PROJECT_DIR$/Oops/Oops.iml" />
       <module fileurl="file://$PROJECT_DIR$/Patterns/Patterns.iml" filepath="$PROJECT_DIR$/Patterns/Patterns.iml" />
