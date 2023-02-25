@@ -33,6 +33,36 @@ public class LL {
         size = size + 1;
     }
 
+    // this method is used to insert at any position of an array
+    public void insert(int val,int index){
+        if(index==0){
+            insertFirst(val);
+            return;
+        }
+        if(index==size){
+            insertLast(val);
+            return;
+        }
+        Node temp = head;
+        for (int i = 1; i < index; i++) {
+            temp = temp.next;
+        }
+        Node node = new Node(val,temp.next);
+        temp.next = node;
+        size = size + 1;
+    }
+
+    // delete the first element
+    public int deleteFirst(){
+        int val = head.value;
+        head = head.next;
+        if(head == null){
+            tail = null;
+        }
+        size = size - 1; // do not forget to do this
+        return val;
+    }
+
     // this method is used to display the linkedList
     public void display(){
         Node temp = head;
