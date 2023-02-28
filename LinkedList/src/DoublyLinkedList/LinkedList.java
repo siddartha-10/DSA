@@ -18,11 +18,21 @@ public class LinkedList {
     // this method is used to display the elements of an DoublyLinkedList
     public void display(){
         Node node = head;
+        Node last = node;
         while(node!=null){
             System.out.print(node.value + " -> ");
+            last = node;
             node = node.next;
         }
         System.out.println("End");
+
+        System.out.println("Print in reverse");
+
+        while(last!=null){
+            System.out.print(last.value + " -> ");
+            last = last.prev;
+        }
+        System.out.println();
     }
     private class Node{
          int value;
