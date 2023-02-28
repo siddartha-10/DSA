@@ -97,6 +97,17 @@ public class LL {
         return node;
     }
 
+    // this method is used to find the element of the linkedList
+    public Node find(int value) {
+        Node node = head;
+        while (node != null) {
+            if(node.value == value){
+                return node;
+            }
+        }
+        return node;
+    }
+
     // this method is used to display the linkedList
     public void display(){
         Node temp = head;
