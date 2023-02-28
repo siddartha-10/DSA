@@ -15,6 +15,23 @@ public class LinkedList {
         head = node;
     }
 
+    // this method is used insert element at the last position without using the tail
+    public void insertLast(int val){
+        Node node = new Node(val);
+        if(head==null){
+            // if the head is null that means linkedlist is empty head = node; head.prev = null;
+            insertFirst(val);
+            return;
+        }
+        Node last = head;
+        while(last.next!=null){
+            last = last.next;
+        }
+        node.prev = last;
+        last.next = node;
+        node.next = null;
+    }
+
     // this method is used to display the elements of an DoublyLinkedList
     public void display(){
         Node node = head;
@@ -32,7 +49,7 @@ public class LinkedList {
             System.out.print(last.value + " -> ");
             last = last.prev;
         }
-        System.out.println();
+        System.out.println("Start");
     }
     private class Node{
          int value;
