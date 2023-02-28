@@ -98,14 +98,14 @@ public class LL {
     }
 
     // this method is used to find the element of the linkedList
-    public Node find(int value) {
+    public int find(int value) {
         Node node = head;
         while (node != null) {
             if(node.value == value){
-                return node;
+                return node.value;
             }
         }
-        return node;
+        return 0;
     }
 
     // this method is used to display the linkedList
