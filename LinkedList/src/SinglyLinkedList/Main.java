@@ -11,11 +11,13 @@ public class Main {
         list.insertFirst(15);
         list.insert(20,2);
         list.display();
-        System.out.println(list.deleteFirst());
-        list.display();
-        System.out.println(list.deleteLast());
-        list.display();
-        System.out.println(list.delete(1));
+//        System.out.println(list.deleteFirst());
+//        list.display();
+//        System.out.println(list.deleteLast());
+//        list.display();
+//        System.out.println(list.delete(1));
+//        list.display();
+        list.insertRec(1000,3);
         list.display();
     }
 }

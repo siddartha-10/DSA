@@ -54,6 +54,20 @@ public class LL {
         size = size + 1;
     }
 
+    // this is insert method using recursion
+    public void insertRec(int val,int index){
+        head = insertRec(val,index,head);
+    }
+    private Node insertRec(int val,int index, Node node){
+        if(index==0){
+            Node temp = new Node(val, node);
+            size = size + 1;
+            return temp;
+        }
+        node.next = insertRec(val,index = index-1,node.next);
+        return node;
+    }
+
     // delete the first element
     public int deleteFirst(){
         int val = head.value;
