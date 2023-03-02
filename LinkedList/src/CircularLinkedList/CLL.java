@@ -32,7 +32,7 @@ public class CLL {
                 temp = temp.next;
             }while (temp!=head);
         }
-        System.out.println("End");
+        System.out.println("Head");
     }
 
     public class Node{
