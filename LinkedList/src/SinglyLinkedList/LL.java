@@ -135,6 +135,24 @@ public class LL {
         System.out.println("End");
     }
 
+    // questions
+    // leetcode 83 remove duplicates from a sorted linked list
+    // https://leetcode.com/problems/remove-duplicates-from-sorted-list/
+    public void duplicates(){
+        Node node = head;
+        while(node.next!=null){
+            if(node.value==node.next.value){
+                node.next = node.next.next;
+                size--;
+            }
+            else{
+                node = node.next;
+            }
+        }
+        tail = node;
+        tail.next = null;
+    }
+
     private class Node{
        private int value;
        private Node next;
@@ -147,5 +165,20 @@ public class LL {
            this.value = value;
            this.next = next;
        }
+    }
+
+    public static void main(String[] args) {
+        LL list = new LL();
+        list.insertLast(1);
+        list.insertLast(1);
+        list.insertLast(1);
+        list.insertLast(2);
+        list.insertLast(4);
+        list.insertLast(4);
+        list.insertLast(4);
+
+        list.display();
+        list.duplicates();
+        list.display();
     }
 }

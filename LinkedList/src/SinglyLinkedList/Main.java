@@ -17,7 +17,7 @@ public class Main {
 //        list.display();
 //        System.out.println(list.delete(1));
 //        list.display();
-        list.insertRec(1000,3);
-        list.display();
+//        list.insertRec(1000,3);
+//        list.display();
     }
 }
