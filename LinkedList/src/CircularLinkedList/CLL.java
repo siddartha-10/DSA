@@ -16,10 +16,11 @@ public class CLL {
         if(tail==null){
             head = node;
             tail = node;
+            return;
         }
         tail.next = node;
-        tail = node;
         node.next = head;
+        tail = node;
     }
 
     // this method is used to display
