@@ -1,5 +1,7 @@
 package DoublyLinkedList;
 
+import SinglyLinkedList.LL;
+
 public class LinkedList {
 
     Node head;
@@ -32,10 +34,39 @@ public class LinkedList {
         node.next = null;
     }
 
+    // this method is used to insert after a particular number
+    // here after_val is what what value u will insert and val is what value you want to insert
+    public void insert(int after_val,int val){
+        Node p = find(after_val);
+        if (p==null){
+            System.out.println("Node Doesn't exist");
+        }
+        Node node = new Node(val);
+        node.next = p.next;
+        p.next = node;
+        node.prev = p;
+        if(node.next!=null){
+            node.next.prev = node;
+        }
+    }
+
+    // this is used to find the node of the particular index
+    public Node find(int value) {
+        Node node = head;
+        while (node != null) {
+            if(node.value == value){
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
+    }
+
     // this method is used to display the elements of an DoublyLinkedList
     public void display(){
         Node node = head;
         Node last = node;
+        System.out.println("Print in the original order");
         while(node!=null){
             System.out.print(node.value + " -> ");
             last = node;
@@ -43,13 +74,13 @@ public class LinkedList {
         }
         System.out.println("End");
 
-        System.out.println("Print in reverse");
-
-        while(last!=null){
-            System.out.print(last.value + " -> ");
-            last = last.prev;
-        }
-        System.out.println("Start");
+//        System.out.println("Print in reverse");
+//
+//        while(last!=null){
+//            System.out.print(last.value + " -> ");
+//            last = last.prev;
+//        }
+//        System.out.println("Start");
     }
     private class Node{
          int value;

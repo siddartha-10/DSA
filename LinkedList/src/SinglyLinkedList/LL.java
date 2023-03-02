@@ -106,6 +106,7 @@ public class LL {
             if(node.value == value){
                 return node.value;
             }
+            node = node.next;
         }
         return 0;
     }
