@@ -26,9 +26,11 @@ public class CLL {
     // this method is used to display
     public void display(){
         Node temp = head;
-        while(temp!=null){
-            System.out.print(temp.val + " -> ");
-            temp = temp.next;
+        if(temp!=null){
+            do{
+                System.out.print(temp.val + " -> ");
+                temp = temp.next;
+            }while (temp!=head);
         }
         System.out.println("End");
     }

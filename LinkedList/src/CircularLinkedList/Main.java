@@ -5,6 +5,9 @@ public class Main {
         CLL list = new CLL();
         list.insert(10);
         list.insert(11);
+        list.insert(12);
+        list.insert(13);
+
         list.display();
     }
 }
