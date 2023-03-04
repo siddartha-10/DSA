@@ -61,3 +61,34 @@ class Solution {
 }
 *
 * */
+
+// this is the 2pointer method whenever the questions ask's about a cycle then we need to use this.
+public class sols {
+    public boolean hasCycle(ListNode head){
+        ListNode fast = head;
+        ListNode slow = head;
+
+        while(fast!=null && fast.next!=null){
+            fast = fast.next.next;
+            slow = slow.next;
+
+            if(fast==slow){
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+class ListNode {
+    int val;
+    ListNode next;
+
+    public ListNode() {
+    }
+
+    ListNode(int x) {
+        val = x;
+        next = null;
+    }
+}
