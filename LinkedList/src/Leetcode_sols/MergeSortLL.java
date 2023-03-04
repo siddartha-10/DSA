@@ -43,7 +43,6 @@ public class MergeSortLL {
             second = second.next;
             tail = tail.next;
         }
-
         return dummy.next;
     }
     public ListNode middle(ListNode head){
