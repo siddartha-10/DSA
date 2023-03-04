@@ -62,9 +62,26 @@ class Solution {
 *
 * */
 
+import java.util.List;
+
 // this is the 2pointer method whenever the questions ask's about a cycle then we need to use this.
 public class sols {
-    public boolean hasCycle(ListNode head){
+    public boolean hasCycle(ListNode head) {
+        ListNode fast = head;
+        ListNode slow = head;
+
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+
+            if (fast == slow) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int lengthCycle(ListNode head) {
         ListNode fast = head;
         ListNode slow = head;
 
@@ -73,11 +90,50 @@ public class sols {
             slow = slow.next;
 
             if(fast==slow){
-                return true;
+                int length = 0;
+                ListNode temp = slow;
+                do {
+                    temp = temp.next;
+                    length++;
+                }while (temp!=slow);
+                return length;
             }
         }
-        return false;
+        return 0;
     }
+
+
+    // this is to find the start point of the cycle in a linkedlist
+    public ListNode detectcycle_startpoint(ListNode head){
+        ListNode fast = head;
+        ListNode slow = head;
+        int length=0;
+        // this code is to find the cycle
+        while(fast!=null && fast.next!=null){
+            fast = fast.next.next;
+            slow = slow.next;
+            if(fast==slow){
+                length = lengthCycle(slow);
+                break;
+            }
+        }
+        if(length == 0){
+            return null;
+        }
+        ListNode first = head;
+        ListNode second = head;
+        while(length > 0){
+            second = second.next;
+            length--;
+        }
+        // now we just need to move the first and second pointer forward until they meet each other.
+        while(first!=second){
+            first = first.next;
+            second = second.next;
+        }
+        return second;
+    }
+
 }
 
 class ListNode {
