@@ -104,6 +104,7 @@ public class sols {
 
 
     // this is to find the start point of the cycle in a linkedlist
+    // https://leetcode.com/problems/linked-list-cycle-ii/description/
     public ListNode detectcycle_startpoint(ListNode head){
         ListNode fast = head;
         ListNode slow = head;
@@ -132,6 +133,33 @@ public class sols {
             second = second.next;
         }
         return second;
+    }
+
+    // this code is asked in google interview and is very important
+    // https://leetcode.com/problems/happy-number/
+    public boolean isHappy(int n) {
+        int slow = n;
+        int fast = n;
+
+        do{
+            slow = squares(slow);
+            fast = squares(squares(fast));
+        }while(slow!=fast);
+
+        if(slow==1){
+            return true;
+        }
+        return false;
+    }
+
+    public int squares(int num){
+        int ans = 0;
+        while(num>0){
+            int rem = num%10;
+            ans = ans + (rem*rem);
+            num/=10;
+        }
+        return ans;
     }
 
 }
