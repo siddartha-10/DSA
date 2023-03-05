@@ -222,6 +222,27 @@ public class LL {
         }
     }
 
+    // google amazon microsoft apple
+    // reverse linked list givn=en only head
+    // https://leetcode.com/problems/reverse-linked-list/
+    public void reverse(Node head){
+        if(size<2){
+            return;
+        }
+        Node prev= null;
+        Node present = head;
+        Node next = present.next;
+        while(present!=null){
+            present.next = prev;
+            prev = present;
+            present = next;
+            if(next!=null){
+                next = next.next;
+            }
+        }
+        head = prev;
+    }
+
     private class Node{
        private int value;
        private Node next;
