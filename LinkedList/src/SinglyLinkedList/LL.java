@@ -184,39 +184,41 @@ public class LL {
     }
 
     // sort linkedlist using bubble sort
-    public void bubbleSort(int row,int col){
-        bubblesort(size-1,0);
+    public void bubbleSort() {
+        bubbleSort(size - 1, 0);
     }
 
-    private void bubblesort(int row, int col) {
-        if(row==0){
+    private void bubbleSort(int row, int col) {
+        if (row == 0) {
             return;
         }
-        if(col<row){
+
+        if (col < row) {
             Node first = get(col);
-            Node second = get(col+1);
-            if(first==head) {
-                if (first.value > second.value) {
-                    first.next = second.next;
+            Node second = get(col + 1);
+
+            if (first.value > second.value) {
+                // swap
+                if (first == head) {
                     head = second;
+                    first.next = second.next;
                     second.next = first;
                 } else if (second == tail) {
                     Node prev = get(col - 1);
                     prev.next = second;
                     tail = first;
+                    first.next = null;
                     second.next = tail;
-                    tail.next = null;
                 } else {
                     Node prev = get(col - 1);
                     prev.next = second;
-                    second.next = first;
                     first.next = second.next;
+                    second.next = first;
                 }
             }
-            bubblesort(row,col+1);
-        }
-        else{
-            bubblesort(row-1,0);
+            bubbleSort(row, col + 1);
+        } else {
+            bubbleSort(row - 1, 0);
         }
     }
 
@@ -235,20 +237,20 @@ public class LL {
     }
 
     public static void main(String[] args) {
-        LL first = new LL();
-        first.insertLast(1);
-        first.insertLast(3);
-        first.insertLast(5);
-        LL second = new LL();
-        second.insertLast(1);
-        second.insertLast(2);
-        second.insertLast(4);
-        second.insertLast(9);
-        second.insertLast(14);
-
-
-        LL ans = merge(first,second);
-        ans.display();
+//        LL first = new LL();
+//        first.insertLast(1);
+//        first.insertLast(3);
+//        first.insertLast(5);
+//        LL second = new LL();
+//        second.insertLast(1);
+//        second.insertLast(2);
+//        second.insertLast(4);
+//        second.insertLast(9);
+//        second.insertLast(14);
+//
+//
+//        LL ans = merge(first,second);
+//        ans.display();
 //        list.insertLast(1);
 //        list.insertLast(1);
 //        list.insertLast(1);
@@ -260,6 +262,13 @@ public class LL {
 //        list.display();
 //        list.duplicates();
 //        list.display();
-        LL ans1 = bubbleSort
+        LL l1 = new LL();
+        for (int i = 3; i > 0; i--) {
+            l1.insertLast(i);
+        }
+        l1.display();
+        l1.bubbleSort();
+        l1.display();
+
     }
 }
