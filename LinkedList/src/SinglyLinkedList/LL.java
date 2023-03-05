@@ -183,6 +183,43 @@ public class LL {
         return ans;
     }
 
+    // sort linkedlist using bubble sort
+    public void bubbleSort(int row,int col){
+        bubblesort(size-1,0);
+    }
+
+    private void bubblesort(int row, int col) {
+        if(row==0){
+            return;
+        }
+        if(col<row){
+            Node first = get(col);
+            Node second = get(col+1);
+            if(first==head) {
+                if (first.value > second.value) {
+                    first.next = second.next;
+                    head = second;
+                    second.next = first;
+                } else if (second == tail) {
+                    Node prev = get(col - 1);
+                    prev.next = second;
+                    tail = first;
+                    second.next = tail;
+                    tail.next = null;
+                } else {
+                    Node prev = get(col - 1);
+                    prev.next = second;
+                    second.next = first;
+                    first.next = second.next;
+                }
+            }
+            bubblesort(row,col+1);
+        }
+        else{
+            bubblesort(row-1,0);
+        }
+    }
+
     private class Node{
        private int value;
        private Node next;
@@ -223,5 +260,6 @@ public class LL {
 //        list.display();
 //        list.duplicates();
 //        list.display();
+        LL ans1 = bubbleSort
     }
 }
