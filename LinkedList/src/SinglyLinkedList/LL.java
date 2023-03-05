@@ -225,7 +225,7 @@ public class LL {
     // google amazon microsoft apple
     // reverse linked list givn=en only head
     // https://leetcode.com/problems/reverse-linked-list/
-    public void reverse(Node head){
+   /* public void reverse(Node head){
         if(size<2){
             return;
         }
@@ -241,6 +241,25 @@ public class LL {
             }
         }
         head = prev;
+    }*/
+
+    // this is the solution i submitted on leetcode.
+    public Node reverseList(Node head) {
+        if(head!=null){
+            Node prev = null;
+            Node present = head;
+            Node next = present.next;
+            while(present!=null){
+                present.next = prev;
+                prev = present;
+                present = next;
+                if(next!=null){
+                    next = next.next;
+                }
+            }
+            return prev;
+        }
+        return head;
     }
 
     private class Node{
