@@ -1,8 +1,8 @@
 package SinglyLinkedList;
 
 public class LL {
-    private Node head;
-    private Node tail;
+    private ListNode head;
+    private ListNode tail;
     private int size;
 
     public LL() {
@@ -12,9 +12,9 @@ public class LL {
     // this is methods is used to insert the first element of the linkedList
     public void insertFirst(int val){
         // when ever you want to add something then we need to create a new node
-        Node node = new Node(val);
-        node.next = head; // we need to point to something else right hence we do next = head
-        head = node; // actually the head is null but after inseting element one how head should point that [articular node
+        ListNode listNode = new ListNode(val);
+        listNode.next = head; // we need to point to something else right hence we do next = head
+        head = listNode; // actually the head is null but after inseting element one how head should point that [articular node
 
         if(tail==null){
             tail = head; // if there is only one element in the linkedList then head and tail are the same
@@ -29,9 +29,9 @@ public class LL {
             insertFirst(val);
             return;
         }
-        Node node = new Node(val);
-        tail.next = node;
-        tail = node;
+        ListNode listNode = new ListNode(val);
+        tail.next = listNode;
+        tail = listNode;
         size = size + 1;
     }
 
@@ -45,12 +45,12 @@ public class LL {
             insertLast(val);
             return;
         }
-        Node temp = head;
+        ListNode temp = head;
         for (int i = 1; i < index; i++) {
             temp = temp.next;
         }
-        Node node = new Node(val,temp.next);
-        temp.next = node;
+        ListNode listNode = new ListNode(val,temp.next);
+        temp.next = listNode;
         size = size + 1;
     }
 
@@ -58,14 +58,14 @@ public class LL {
     public void insertRec(int val,int index){
         head = insertRec(val,index,head);
     }
-    private Node insertRec(int val,int index, Node node){
+    private ListNode insertRec(int val, int index, ListNode listNode){
         if(index==0){
-            Node temp = new Node(val, node);
+            ListNode temp = new ListNode(val, listNode);
             size = size + 1;
             return temp;
         }
-        node.next = insertRec(val,index = index-1,node.next);
-        return node;
+        listNode.next = insertRec(val,index = index-1, listNode.next);
+        return listNode;
     }
 
     // delete the first element
@@ -84,7 +84,7 @@ public class LL {
         if(size<=1){
             return deleteFirst();
         }
-        Node secondLast = get(size-2);
+        ListNode secondLast = get(size-2);
         int val = tail.value;
         tail = secondLast;
         tail.next = null;
@@ -97,7 +97,7 @@ public class LL {
         if(index==0){
             return deleteFirst();
         }
-        Node prev = get(index-1);
+        ListNode prev = get(index-1);
         int val = prev.next.value;
         prev.next = prev.next.next;
         size =size-1;
@@ -105,29 +105,29 @@ public class LL {
     }
 
     // this method is used to get the node of the index to be deleted
-    public Node get(int index){
-        Node node = head;
+    public ListNode get(int index){
+        ListNode listNode = head;
         for (int i = 0; i < index; i++) {
-            node = node.next;
+            listNode = listNode.next;
         }
-        return node;
+        return listNode;
     }
 
     // this method is used to find the element of the linkedList
     public int find(int value) {
-        Node node = head;
-        while (node != null) {
-            if(node.value == value){
-                return node.value;
+        ListNode listNode = head;
+        while (listNode != null) {
+            if(listNode.value == value){
+                return listNode.value;
             }
-            node = node.next;
+            listNode = listNode.next;
         }
         return 0;
     }
 
     // this method is used to display the linkedList
     public void display(){
-        Node temp = head;
+        ListNode temp = head;
         while(temp!=null){
             System.out.print(temp.value + " -> ");
             temp = temp.next;
@@ -139,17 +139,17 @@ public class LL {
     // leetcode 83 remove duplicates from a sorted linked list
     // https://leetcode.com/problems/remove-duplicates-from-sorted-list/
     public void duplicates(){
-        Node node = head;
-        while(node.next!=null){
-            if(node.value==node.next.value){
-                node.next = node.next.next;
+        ListNode listNode = head;
+        while(listNode.next!=null){
+            if(listNode.value== listNode.next.value){
+                listNode.next = listNode.next.next;
                 size--;
             }
             else{
-                node = node.next;
+                listNode = listNode.next;
             }
         }
-        tail = node;
+        tail = listNode;
         tail.next = null;
     }
 
@@ -157,8 +157,8 @@ public class LL {
     // leetcode 21 merger two sorted linkedlist
     // https://leetcode.com/problems/merge-two-sorted-lists/
     public static LL merge(LL first,LL second){
-        Node f = first.head;
-        Node s = second.head;
+        ListNode f = first.head;
+        ListNode s = second.head;
         LL ans = new LL();
         while(f!=null && s!=null){
             if(f.value < s.value){
@@ -194,8 +194,8 @@ public class LL {
         }
 
         if (col < row) {
-            Node first = get(col);
-            Node second = get(col + 1);
+            ListNode first = get(col);
+            ListNode second = get(col + 1);
 
             if (first.value > second.value) {
                 // swap
@@ -204,13 +204,13 @@ public class LL {
                     first.next = second.next;
                     second.next = first;
                 } else if (second == tail) {
-                    Node prev = get(col - 1);
+                    ListNode prev = get(col - 1);
                     prev.next = second;
                     tail = first;
                     first.next = null;
                     second.next = tail;
                 } else {
-                    Node prev = get(col - 1);
+                    ListNode prev = get(col - 1);
                     prev.next = second;
                     first.next = second.next;
                     second.next = first;
@@ -244,11 +244,11 @@ public class LL {
     }*/
 
     // this is the solution i submitted on leetcode.
-    public Node reverseList(Node head) {
+    public ListNode reverseList(ListNode head) {
         if(head!=null){
-            Node prev = null;
-            Node present = head;
-            Node next = present.next;
+            ListNode prev = null;
+            ListNode present = head;
+            ListNode next = present.next;
             while(present!=null){
                 present.next = prev;
                 prev = present;
@@ -262,15 +262,51 @@ public class LL {
         return head;
     }
 
-    private class Node{
-       private int value;
-       private Node next;
+    // reverse a linked list given the left and the right element
+    // https://leetcode.com/problems/reverse-linked-list-ii/description/
+    public ListNode reverseBetween(ListNode head, int left, int right) {
+        if(left==right){
+            return head;
+        }
+        ListNode prev = null;
+        ListNode current  = head;
 
-       public Node(int value) {
+        for (int i = 0; current!=null && i < left - 1; i++) {
+            prev = current;
+            current = current.next;
+        }
+
+        ListNode newEnd = current;
+        ListNode last = prev;
+        ListNode next = current.next;
+        for (int i = 0; current!=null && i < right - left + 1; i++) {
+            current.next = prev;
+            prev = current;
+            current = next;
+            if(next!=null){
+                newEnd = next.next;
+            }
+        }
+
+        if (last!=null){
+            last.next = prev;
+        }
+        else{
+            head = prev;
+        }
+        newEnd.next = current;
+        return head;
+    }
+
+    private class ListNode {
+       private int value;
+       private ListNode next;
+
+       public ListNode(int value) {
            this.value = value;
        }
 
-       public Node(int value, Node next) {
+       public ListNode(int value, ListNode next) {
            this.value = value;
            this.next = next;
        }
