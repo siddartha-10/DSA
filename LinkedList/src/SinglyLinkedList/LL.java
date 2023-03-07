@@ -298,6 +298,60 @@ public class LL {
         return head;
     }
 
+    // linkedIn, Amazon, google, microsoft, apple, meta
+    // https://leetcode.com/problems/palindrome-linked-list/
+    public boolean isPalindrome(ListNode head) {
+        ListNode mid = getMiddle(head);
+        ListNode headSecond = rev(mid);
+        ListNode rereverse = headSecond;
+
+        while(head!=null && headSecond!=null){
+            if(head.value!=headSecond.value){
+                break;
+            }
+            head = head.next;
+            headSecond = headSecond.next;
+        }
+        rev(rereverse); // this to again reverse and bring the list to its original position.
+        if(head==null || headSecond==null){
+            return true;
+        }
+        return false;
+    }
+
+    // to do rev of list
+    public ListNode rev(ListNode head){
+        ListNode prev= null;
+        ListNode present = head;
+        ListNode next = present.next;
+        while(present!=null){
+            present.next = prev;
+            prev = present;
+            present = next;
+            if(next!=null){
+                next = next.next;
+            }
+        }
+        return prev;
+    }
+
+    // get middle of the linkedList
+    public ListNode getMiddle(ListNode head){
+        ListNode fast = head;
+        ListNode slow = head;
+        while(fast!=null && fast.next!=null){
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+
+    // google meta
+    // https://leetcode.com/problems/reorder-list/
+    public void reorderList(ListNode head) {
+
+    }
+
     private class ListNode {
        private int value;
        private ListNode next;
