@@ -349,7 +349,47 @@ public class LL {
     // google meta
     // https://leetcode.com/problems/reorder-list/
     public void reorderList(ListNode head) {
+        if(head==null || head.next==null){
+            return;
+        }
+        ListNode mid = getmid2(head);
+        ListNode headSecond = rev2(mid);
+        ListNode rerev = headSecond;
 
+        while(head!=null && headSecond!=null){
+            ListNode temp1 = head.next;
+            head.next = headSecond;
+            head = temp1;
+            ListNode temp2 = headSecond.next;
+            headSecond.next = head;
+            headSecond = temp2;
+        }
+    }
+
+    public ListNode rev2(ListNode head) {
+        ListNode prev =null;
+        ListNode present = head;
+        ListNode next = present.next;
+
+        while(present!=null){
+            present.next = prev;
+            prev = present;
+            present = next;
+            if(next!=null){
+                next = next.next;
+            }
+        }
+        return prev;
+    }
+
+    private ListNode getmid2(ListNode head) {
+        ListNode fast = head;
+        ListNode slow = head;
+        while(fast!=null && slow!=null){
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
     }
 
     private class ListNode {
