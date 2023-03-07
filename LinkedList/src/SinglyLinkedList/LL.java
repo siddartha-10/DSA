@@ -294,7 +294,7 @@ public class LL {
         else{
             head = prev;
         }
-        newEnd.next = current
+        newEnd.next = current;
         return head;
     }
 
