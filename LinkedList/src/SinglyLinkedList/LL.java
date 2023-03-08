@@ -354,15 +354,19 @@ public class LL {
         }
         ListNode mid = getmid2(head);
         ListNode headSecond = rev2(mid);
-        ListNode rerev = headSecond;
+        ListNode headfirst = head;
 
         while(head!=null && headSecond!=null){
-            ListNode temp1 = head.next;
-            head.next = headSecond;
-            head = temp1;
+            ListNode temp1 = headfirst.next;
+            headfirst.next = headSecond;
+            headfirst = temp1;
             ListNode temp2 = headSecond.next;
-            headSecond.next = head;
+            headSecond.next = headfirst;
             headSecond = temp2;
+        }
+
+        if(headfirst!=null){
+            headfirst.next = null;
         }
     }
 
