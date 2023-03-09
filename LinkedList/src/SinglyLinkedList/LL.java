@@ -396,6 +396,57 @@ public class LL {
         return slow;
     }
 
+    // google facebook amazon microsoft
+    // https://leetcode.com/problems/reverse-nodes-in-k-group/
+    // leetcode - 25
+
+//    public ListNode reverseKGroup(ListNode head, int k) {
+//        if(k<=1 || head==null){
+//            return head;
+//        }
+//        ListNode prev = null;
+//        ListNode current  = head;
+//
+//        while (true){
+//            for (int i = 0; current!=null && i < k; i++) {
+//                prev = current;
+//                current = current.next;
+//            }
+//
+//            ListNode newEnd = current;
+//            ListNode last = prev;
+//            ListNode next = current.next;
+//            for (int i = 0; current!=null && i < k; i++) {
+//                current.next = prev;
+//                prev = current;
+//                current = next;
+//                if(next!=null){
+//                    newEnd = next.next;
+//                }
+//            }
+//
+//            if (last!=null){
+//                last.next = prev;
+//            }
+//            else{
+//                head = prev;
+//            }
+//            newEnd.next = current;
+//
+//            if(current==null){
+//                break;
+//            }
+//
+//            prev = newEnd;
+//        }
+//
+//        return head;
+//    }
+
+    // https://leetcode.com/problems/rotate-list/
+    // google twitter facebook
+
+
     private class ListNode {
        private int value;
        private ListNode next;
