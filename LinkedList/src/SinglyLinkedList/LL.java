@@ -366,7 +366,7 @@ public class LL {
         }
 
         if(headfirst!=null){
-            headfirst.next = null;
+            headfirst.next = null
         }
     }
 
