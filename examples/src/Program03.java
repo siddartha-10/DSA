@@ -1,30 +1,29 @@
 import java.util.Scanner;
 public class Program03 {
     public static void main(String[] args) {
-        Scanner name = new Scanner(System.in);
-        Scanner name2 = new Scanner(System.in);
-        Scanner earned_runs = new Scanner(System.in);
-        Scanner innings = new Scanner(System.in);
-        String FirstName;
-        System.out.print("Pitcher's first name: ");
-        FirstName = name.next();
-//1st name//
-        String LastName;
-        System.out.print("Pitcher's last name: ");
-        LastName = name2.next();
-//Last//
-        int eRuns;
+        Scanner stdIn = new Scanner(System.in);
+
+        //      Input
+        System.out.print("Enter the Pitcher's First Name: ");   //  Inputting FirstName
+        String FirstName = stdIn.next();
+        System.out.print("Enter the Pitcher's Last Name: ");    //  Inputting Last Name
+        String LastName = stdIn.next();
+        int runs;         //  Declaring variables & inputting numbers
+        int innings;
         System.out.print("Number of earned runs: ");
-        eRuns = earned_runs.nextInt();
-//runs//
-        int innings_2;
+        runs = stdIn.nextInt();
         System.out.print("Number of innings pitched: ");
-        innings_2 = innings.nextInt();
-//innings//
-        double ERA = (eRuns * 9.0)/innings_2;
-        System.out.print(FirstName+ " " + LastName + " has an ERA of " +ERA);
-        name.close();
-        earned_runs.close();
-        innings.close();
+        innings = stdIn.nextInt();
+        Double r = Double.valueOf(runs);        //  Converting int to double
+        Double i = Double.valueOf(innings);
+        double ERA;
+        ERA = r*9 / i;                          //Formula to get ERA
+//      Output
+        System.out.println('\n' + "Pitcher's First Name: " + FirstName);
+        System.out.print("Pitcher's Last Name: " + LastName);
+        System.out.print('\n' + "Number of earned runs: " + runs);
+        System.out.print('\n' + "Number of innings pitched: " + innings);
+        System.out.print('\n' + FirstName + '\t' + LastName + " has an ERA of " + ERA);
+        stdIn.close();
     }
 }
