@@ -1,55 +1,24 @@
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
-
-public class C{
+public class C {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String response = sc.nextLine();
-
-        char first = response.charAt(0);
-        char second = response.charAt(1);
-        char third = response.charAt(2);
-        char fourth = response.charAt(3);
-        int count_decimal = 0;
-
-        if(first=='.'){
-            count_decimal++;
-        }
-        if(second=='.'){
-            count_decimal++;
-        }
-        if(third=='.'){
-            count_decimal++;
-        }
-        if(fourth=='.'){
-            count_decimal++;
-        }
-        if(count_decimal>1){
-            System.out.println("false");
-            System.exit(0);
-        }
-
-        if(first=='+' || first=='-' || first=='.' || (first>='0' && first<='9')){
-            if(second=='.' || (second>='0' && second<='9')){
-                if(third=='.' || (third>='0' && third<='9')){
-                    if(fourth=='.' || (fourth>='0' && fourth<='9')){
-                        System.out.println("true");
-                    }
-                    else{
-                        System.out.println(false);
-                    }
-                }
-                else{
-                    System.out.println(false);
-                }
-            }
-            else{
-                System.out.println(false);
-            }
-        }
-        else{
-            System.out.println(false);
-        }
+        Scanner stdIn = new Scanner (System.in);
+// String inputs
+        System.out.println("Pitcher's first name: ");
+        String fn = stdIn.next(); // this stores the next input as the firstname as a string
+        System.out.println("Pitcher's last name: ");
+        String ln = stdIn.next(); // this stores the next input as the lastname as a string
+// Int inputs
+        System.out.println("Earned runs: ");
+        int runs = stdIn.nextInt(); // stores next input as number of earnedruns as an Int variable
+        System.out.println("Innings pitched: ");
+        int inns = stdIn.nextInt(); // stores next input as number of inningspitched as an Int variable
+// Calculation
+        double ERA = (double)(runs*9)/inns;
+// Output
+        System.out.println("Pitcher's name: " + fn + " " + ln);
+        System.out.println("Earned runs: " +runs);
+        System.out.println("Pitched innings: " + inns);
+        System.out.printf("\nERA: %.3f", ERA);
     }
 }
-
