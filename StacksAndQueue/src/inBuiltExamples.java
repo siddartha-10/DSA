@@ -45,7 +45,7 @@ public class inBuiltExamples {
         deque.removeFirst(); // this is used to remove the first element works same as the remove but will not give an error
 
         deque.removeLast(); // this is used to remove the element from the last of the deque.
-        
+
          */
     }
 }
