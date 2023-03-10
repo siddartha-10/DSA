@@ -1,6 +1,7 @@
 public class CustomStack {
     protected int[] data;
     private static final int Default_Size = 10;
+    int ptr = -1;
 
     /*
     Here we are using this keyword to call the constructor with a parameter as size.
@@ -11,6 +12,20 @@ public class CustomStack {
     }
 
     public CustomStack(int size) {
-        this.data = data;
+        this.data = new int[size];
+    }
+
+    public boolean push(int item){
+        if(isFull()){
+            System.out.println("Stack is Full");
+            return false;
+        }
+        ptr++;
+        data[ptr] = item;
+        return true;
+    }
+
+    private boolean isFull() {
+        return ptr == data.length - 1;
     }
 }
