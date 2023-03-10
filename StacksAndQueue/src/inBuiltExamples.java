@@ -28,7 +28,7 @@ public class inBuiltExamples {
         it will not remove the element.
 
         System.out.println(queue.remove()); // this will completely remove the element from the queue.
-        
+
         Deque<Integer> deque = new ArrayDeque<>();
 
         deque.add(12);
@@ -45,5 +45,7 @@ public class inBuiltExamples {
         deque.removeFirst(); // this is used to remove the first element works same as the remove but will not give an error
 
         deque.removeLast(); // this is used to remove the element from the last of the deque.
+        
+         */
     }
 }
