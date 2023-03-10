@@ -1,5 +1,5 @@
-public class Stack {
+public class CustomStack {
     public static void main(String[] args) {
-        
+
     }
 }
