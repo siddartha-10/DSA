@@ -12,7 +12,7 @@ public class CustomStack {
     }
 
     public CustomStack(int size) {
-        this.data = new int[size];
+        this.data = new int[size]
     }
 
     public boolean push(int item){
