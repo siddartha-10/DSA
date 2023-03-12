@@ -5,7 +5,7 @@ public class example {
         int cnt = 400;
         while(cnt>=1){
             cnt--;
-            System.out.println(cnt);
+            System.out.println(cnt)
 
         }
 //        int cnt = 2;
