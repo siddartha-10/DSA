@@ -1,5 +1,5 @@
 import java.util.Arrays;
-
+// https://practice.geeksforgeeks.org/problems/reversal-algorithm5340/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=reversal-algorithm
 public class Left_Rotate_The_array_by_N {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5};
