@@ -15,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/Sorting.iml" filepath="$PROJECT_DIR$/Sorting.iml" />
       <module fileurl="file://$PROJECT_DIR$/StacksAndQueue/StacksAndQueue.iml" filepath="$PROJECT_DIR$/StacksAndQueue/StacksAndQueue.iml" />
       <module fileurl="file://$PROJECT_DIR$/Strings/Strings.iml" filepath="$PROJECT_DIR$/Strings/Strings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Problems/Arrays/easy/easy.iml" filepath="$PROJECT_DIR$/Problems/Arrays/easy/easy.iml" />
       <module fileurl="file://$PROJECT_DIR$/examples/examples.iml" filepath="$PROJECT_DIR$/examples/examples.iml" />
       <module fileurl="file://$PROJECT_DIR$/Recursion_Kunal/kunal_recusrion_questions/kunal_recusrion_questions.iml" filepath="$PROJECT_DIR$/Recursion_Kunal/kunal_recusrion_questions/kunal_recusrion_questions.iml" />
     </modules>
