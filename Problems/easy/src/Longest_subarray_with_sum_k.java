@@ -2,9 +2,9 @@ import java.util.HashMap;
 
 public class Longest_subarray_with_sum_k {
     public static void main(String[] args) {
-        int[] arr = {1,2,3,1,1,1,1,4,2,3};
+        int[] arr = {-13,0,6,15, 16, 2, 15, -12, 17, -16, 0, -3, 19, -3, 2, -9, -6};
         int len = 0;
-        int k = 3;
+        int k = 15;
         //brute_force(arr,k,len);
         System.out.println(better_sol(arr,k,len));
     }
@@ -26,7 +26,9 @@ public class Longest_subarray_with_sum_k {
                     len = len1;
                 }
             }
-            hs.put(sum,i);
+            if(!hs.containsKey(sum)){
+                hs.put(sum,i);
+            }
         }
         System.out.println(hs);
         return len;
