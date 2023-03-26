@@ -2,15 +2,10 @@ import java.sql.SQLOutput;
 
 public class example {
     public static void main(String[] args) {
-        int cnt = 400;
-        while(cnt>=1){
-            cnt--;
-            System.out.println(cnt);
-
+        int n = 4;
+        while(n<20){
+            ++n;
+            System.out.println(n);
         }
-//        int cnt = 2;
-//        while(cnt < 5){
-//            cnt = cnt + 1;
-//            System.out.println("cnt = "+ cnt)
     }
 }
